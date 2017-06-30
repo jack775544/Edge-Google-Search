@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap3">
+
+  <Identity
+    Name="22097JackKerr.ReverseSearchforMicrosoftEdge"
+    Publisher="CN=21BCEA30-D080-426E-B3B0-03BFCF5A3F61"
+    Version="1.0.0.0"/>
+
+  <Properties>
+    <DisplayName>Reverse Search For Microsoft Edge</DisplayName>
+    <PublisherDisplayName>Jack Kerr</PublisherDisplayName>
+    <Logo>Assets/search-50.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop"
+      MinVersion="10.0.14393.0"
+      MaxVersionTested="10.0.14800.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-us"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App">
+      <uap:VisualElements
+        AppListEntry="none"
+        DisplayName="Reverse Search For Microsoft Edge"
+        Square150x150Logo="Assets/search-150.png"
+        Square44x44Logo="Assets/search-44.png"
+        Description="Search images and text with Google Search"
+        BackgroundColor="white">
+      </uap:VisualElements>
+      <Extensions>
+      <uap3:Extension Category="windows.appExtension">
+        <uap3:AppExtension Name="com.microsoft.edge.extension"
+          Id="EdgeExtension"
+          PublicFolder="Extension"
+          DisplayName="Reverse Search For Microsoft Edge">
+        </uap3:AppExtension>
+      </uap3:Extension>
+      </Extensions>
+ </Application>
+</Applications>
+</Package>

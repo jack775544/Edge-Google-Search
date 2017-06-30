@@ -6,9 +6,8 @@
     },
     "description": "Search images and text with Google Search",
     "icons": {
-        "48": "icons/google-48.png",
-        "32": "icons/google-32.png",
-        "16": "icons/google-16.png"
+        "32": "icons/search-32.png",
+        "16": "icons/search-16.png"
     },
     "manifest_version": 2,
     "name": "Google Search",
@@ -16,7 +15,7 @@
         "activeTab",
         "contextMenus"
     ],
-    "version": "1",
+    "version": "1.0.0.0",
     "-ms-preload": {
         "backgroundScript": "backgroundScriptsAPIBridge.js",
         "contentScript": "contentScriptsAPIBridge.js"
