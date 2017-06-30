@@ -1,0 +1,24 @@
+{
+    "author": "jack775544",
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "description": "Search images and text with Google Search",
+    "icons": {
+        "48": "icons/google-48.png",
+        "32": "icons/google-32.png",
+        "16": "icons/google-16.png"
+    },
+    "manifest_version": 2,
+    "name": "Google Search",
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ],
+    "version": "1",
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
+    }
+}
