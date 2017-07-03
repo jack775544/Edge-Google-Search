@@ -14,7 +14,7 @@ function onImageRequest(info, tab) {
 
 browser.contextMenus.create({
     id: "google_search",
-    title: "Search with Google",
+    title: "Search Google for '%s'",
     "contexts": ["selection"],
     "onclick": onSelectionRequest
 });
