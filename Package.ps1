@@ -3,7 +3,7 @@
 Package or unpackage the extension
 
 .PARAMETER Operation
-The packageing operation to do. The valid options are 'pack', 'unpack' and 'cert'
+The packageing operation to do. The valid options are 'pack', 'unpack', 'cert' and 'sign'
 
 .EXAMPLE
 Package.ps1 pack
