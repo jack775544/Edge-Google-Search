@@ -53,6 +53,7 @@ switch ($Operation) {
         $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($SecurePassword)
         $PlainPassword = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
         SignTool sign /fd SHA256 /a /f .\deploy\cert\cert.pfx /p $PlainPassword .\deploy\edge-search.appx
+        break
     }
     Default {
         Write-Error "Invalid Option"
