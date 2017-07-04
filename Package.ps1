@@ -3,7 +3,7 @@
 Package or unpackage the extension
 
 .PARAMETER Operation
-The packageing operation to do. The valid options are 'pack', 'unpack' and 'cert'
+The packageing operation to do. The valid options are 'pack', 'unpack', 'cert' and 'sign'
 
 .EXAMPLE
 Package.ps1 pack
@@ -49,8 +49,10 @@ switch ($Operation) {
         break
     }
     'Sign' {
-        $Password = Read-Host -Prompt "Enter certificate password"
-        SignTool sign /fd SHA256 /a /f .\deploy\cert\cert.pfx /p $Password .\deploy\edge-search.appx
+        $Password = Read-Host -Prompt "Enter certificate password" -AsSecureString
+        $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($SecurePassword)
+        $PlainPassword = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+        SignTool sign /fd SHA256 /a /f .\deploy\cert\cert.pfx /p $PlainPassword .\deploy\edge-search.appx
     }
     Default {
         Write-Error "Invalid Option"

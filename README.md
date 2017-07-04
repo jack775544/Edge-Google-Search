@@ -12,4 +12,6 @@ To deploy an appx package run the following in a powershell window
 .\Package.ps1 Sign
 certutil -f -user -p PASSWORD -importpfx "TrustedPeople" .\deploy\cert\cert.pfx
 ```
+It is recommended to do this in an administrator terminal as the creation of the cert and the deployment of the cert to TrustedPeople require admin.
+
 This will create a self signed appx package that can be deployed to your local instance.
